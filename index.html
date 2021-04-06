@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>LeasingCar</title>
+    <link href="assets/font/stylesheet.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<header id="navbar">
+
+    <div class="menu">
+        <svg width="133" height="35" viewBox="0 0 133 35" fill="none" xmlns="http://www.w3.org/2000/svg"
+             class="leasing">
+            <path d="M0 27.1001H18.6313V21.0779H6.21045V1.88195H0V27.1001Z" fill="#FF9514"/>
+            <path d="M29.2356 7.71601C23.4391 7.71601 19.3741 12.0445 19.3741 17.6904C19.3741 22.9598 22.6864
+            27.6647 29.1226 27.6647C33.6017 27.6647 37.4785 25.3687 38.683 21.0779H32.6231C32.0209 22.0189 30.4776
+            22.6211 29.0474 22.5082C26.8643 22.32 25.6222 21.0402 25.2458 19.61H38.7959C39.5487 12.7596 35.5213 7.71601
+             29.2356 7.71601ZM29.1979 12.8349C31.0422 12.8349 32.5102 13.7006 33.0371 15.2815H25.3211C25.848 13.7759
+             27.316 12.8349 29.1979 12.8349Z" fill="#FF9514"/>
+            <path d="M54.7842 10.5766H54.6337C53.5045 8.9581 51.4344 7.71601 48.8373 7.71601C43.6807 7.71601 40.1427
+            11.9692 40.1427 17.7656C40.1427 23.7126 43.9066 27.6647 48.8373 27.6647C51.4344 27.6647 53.5045 26.4226
+            54.6337 24.8041H54.7842V27.1001H60.5807V8.2806H54.7842V10.5766ZM50.4181 22.1694C47.9339 22.1694 46.052
+            20.3251 46.052 17.6904C46.052 15.0556 47.9339 13.2113 50.4181 13.2113C52.9399 13.2113 54.7842 15.1309
+            54.7842 17.6904C54.7842 20.1369 53.0152 22.1694 50.4181 22.1694Z" fill="#FF9514"/>
+            <path d="M68.928 8.2806C65.3147 8.2806 62.4917 10.6519 62.4917 14.077C62.4917 16.6365 64.4866 18.5937
+            67.2719 19.1959L74.1222 20.6638C74.3857 20.7391 74.461 20.9273 74.461 21.0779C74.461 21.2661 74.3104
+            21.4543 74.0469 21.4543H63.2822V27.1001H74.0846C77.6979 27.1001 80.5961 24.6912 80.5961 21.2284C80.5961
+            18.5561 78.6765 16.5612 75.7783 15.9966L69.0409 14.6792C68.8527 14.6416 68.7022 14.4534 68.7022
+             14.3028C68.7022 14.1146 68.8527 13.9265 69.1162 13.9265H79.2411V8.2806H68.928Z" fill="#FF9514"/>
+            <path d="M82.5095 0V6.21045H88.3436V0H82.5095ZM82.5095 8.2806V27.1001H88.3436V8.2806H82.5095Z"
+                  fill="#FF9514"/>
+            <path d="M102.767 7.75365C100.66 7.75365 98.6646 8.69462 97.4226
+            10.426H97.272V8.2806H91.5885V27.1001H97.4226V17.1634C97.4226 14.8298 99.2292 13.5124 100.961
+             13.5124C102.504 13.5124 104.122 14.5663 104.122 16.9752V27.1001H109.956V16.1848C109.956 10.6895
+             107.246 7.75365 102.767 7.75365Z" fill="#FF9514"/>
+            <path d="M126.35 10.5766H126.199C125.07 8.9581 123 7.71601 120.403 7.71601C115.246 7.71601 111.708
+            11.9692 111.708 17.7656C111.708 23.7126 115.472 27.6647 120.403 27.6647C123 27.6647 125.07 26.4226
+            126.199 24.8041H126.35V27.5518C126.35 28.3046 125.785 28.7562 124.995
+            28.7562H114.193V34.6279H126.425C130.039 34.6279 132.146 32.6707 132.146
+            29.095V8.2806H126.35V10.5766ZM121.984 22.1694C119.5 22.1694 117.618 20.3251 117.618 17.6904C117.618
+            15.0556 119.5 13.2113 121.984 13.2113C124.506 13.2113 126.35 15.1309 126.35 17.6904C126.35 20.1369
+            124.581 22.1694 121.984 22.1694Z" fill="#FF9514"/>
+        </svg>
+        <svg width="66" height="27" viewBox="0 0 66 27" fill="none" xmlns="http://www.w3.org/2000/svg"
+             class="leasing-car">
+            <path d="M20.2232 15.5988C19.5457 18.6476 17.0616 20.5672 13.7117 20.5672C9.30791 20.5672 6.93665
+            17.2173 6.93665 13.4911C6.93665 9.68951 9.34555 6.49019 13.6364 6.41491C17.0616 6.33963 19.3575 8.33451
+            20.0727 11.1198H26.509C25.7938 5.05991 20.8255 0.317383 13.7117 0.317383C5.7322 0.317383 0.613281 6.26436
+            0.613281 13.5663C0.613281 20.793 5.7322 26.6647 13.7117 26.6647C21.0137 26.6647 25.9444 21.8846 26.5842
+            15.5988H20.2232Z" fill="#111111"/>
+            <path d="M42.6335 9.5766H42.4829C41.3538 7.95811 39.2836 6.71602 36.6865 6.71602C31.53 6.71602 27.9919
+            10.9692 27.9919 16.7657C27.9919 22.7126 31.7558 26.6647 36.6865 26.6647C39.2836 26.6647 41.3538 25.4226
+            42.4829 23.8042H42.6335V26.1001H48.4299V7.28061H42.6335V9.5766ZM38.2674 21.1694C35.7832 21.1694 33.9012
+            19.3251 33.9012 16.6904C33.9012 14.0556 35.7832 12.2113 38.2674 12.2113C40.7892 12.2113 42.6335 14.1309
+             42.6335 16.6904C42.6335 19.1369 40.8645 21.1694 38.2674 21.1694Z" fill="#111111"/>
+            <path d="M61.3228 7.28061C59.4032 7.28061 57.86 8.40978 57.333
+            10.1035H57.1825V7.28061H51.6495V26.1001H57.4836V16.5775C57.4836 14.5826 58.9515 13.1147 60.9464
+            13.1147H65.5007V7.28061H61.3228Z" fill="#111111"/>
+        </svg>
+        <div class="line"></div>
+        <div class="menu-text">лизинговая компания</div>
+    </div>
+
+    <div class="nav ">
+        <div class="dropdown">
+            <a href="#" class="nav-lizing dropbtn">Лизинг</a>
+            <div class="dropdown-content">
+                <a href="#">Для личного пользования</a>
+                <a href="#">Для юридических лиц</a>
+                <a href="#calculator-but">Калькулятор</a>
+            </div>
+        </div>
+        <a href="#" class="nav-katalog">Каталог</a>
+        <a href="#" class="nav-nas">О нас</a>
+    </div>
+    <div class="nav-request">
+        <button class="nav-button">
+            <div class="nav-button-text">
+                <a href="#" class="js-open-modal" data-modal="1">Оставить заявку</a></div>
+        </button>
+    </div>
+
+    <button class="nav-toggle" type="button">
+        <span class="nav-toggle__item">Menu</span>
+    </button>
+
+
+    <div class="modal" data-modal="1">
+        <svg class="modal-cross js-modal-close" width="48" height="48" viewBox="0 0 48 48" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="24" fill="#F3F3F4"/>
+            <path d="M30.5996 17.4004L17.4003 30.5997" stroke="#828282" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"/>
+            <path d="M17.4004 17.4004L30.5997 30.5997" stroke="#828282" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"/>
+        </svg>
+        <p class="modal-title">Онлайн-заявка</p>
+        <p class="modal-text">Заполните форму, и мы вскоре свяжемся с вами, чтобы ответить на все вопросы</p>
+        <div class="form">
+            <form>
+                <label for="online_phone" class="online-phone">Телефон:</label>
+                <input id="online_phone" name="phone" type="tel" maxlength="50" class="phone"
+                       autofocus="autofocus" required="required"
+                       value="+7(___)___-__-__"
+                       pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+                       placeholder="+7(___)___-__-__">
+            </form>
+        </div>
+        <div class="name">
+            <label class="name-label">Имя</label>
+            <input maxlength="25" size="40" class="name-input">
+        </div>
+        <div class="dispatch">
+            <div class="dispatch-text">Нажимая на кнопку «Оставить заявку», я даю согласие <span
+                    class="dispatch-text-color">на обработку персональных данных</span></div>
+        </div>
+        <button class="dispatch-button js-modal-close">
+            <div class="dispatch-button-text">
+                <a href="#">Оставить заявку</a></div>
+        </button>
+        <a href="https://api.whatsapp.com/send?phone=78051196325" target="_blank" class="icon-whatsapp">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.0001 0.799927C4.92731 0.799927 0.800108 4.92713 0.800108 9.99993C0.800108 11.5839 1.20931 13.1415 1.98531 14.5159L0.814908 18.6919C0.776508 18.8291 0.813708 18.9763 0.912908 19.0783C0.989308 19.1571 1.09331 19.1999 1.20011 19.1999C1.23211 19.1999 1.26451 19.1959 1.29611 19.1883L5.65451 18.1087C6.98531 18.8231 8.48411 19.1999 10.0001 19.1999C15.0729 19.1999 19.2001 15.0727 19.2001 9.99993C19.2001 4.92713 15.0729 0.799927 10.0001 0.799927ZM14.6281 13.2463C14.4313 13.7911 13.4873 14.2883 13.0337 14.3551C12.6265 14.4147 12.1113 14.4403 11.5457 14.2627C11.2029 14.1547 10.7629 14.0115 10.1993 13.7711C7.83011 12.7607 6.28291 10.4051 6.16451 10.2495C6.04651 10.0939 5.20011 8.98513 5.20011 7.83753C5.20011 6.68993 5.81011 6.12553 6.02691 5.89193C6.24371 5.65833 6.49931 5.59993 6.65691 5.59993C6.81451 5.59993 6.97171 5.60193 7.10971 5.60833C7.25491 5.61553 7.44971 5.55353 7.64131 6.00873C7.83811 6.47593 8.31051 7.62353 8.36891 7.74073C8.42811 7.85753 8.46731 7.99393 8.38891 8.14953C8.31051 8.30513 8.27131 8.40233 8.15291 8.53873C8.03451 8.67513 7.90491 8.84273 7.79851 8.94753C7.68011 9.06393 7.55731 9.18993 7.69491 9.42353C7.83251 9.65713 8.30651 10.4207 9.00891 11.0391C9.91091 11.8335 10.6721 12.0799 10.9081 12.1967C11.1441 12.3135 11.2821 12.2939 11.4197 12.1383C11.5573 11.9823 12.0101 11.4571 12.1673 11.2239C12.3245 10.9907 12.4821 11.0291 12.6989 11.1071C12.9157 11.1847 14.0769 11.7487 14.3129 11.8655C14.5489 11.9823 14.7065 12.0407 14.7657 12.1379C14.8249 12.2347 14.8249 12.7019 14.6281 13.2463Z"
+                      fill="#575757"/>
+            </svg>
+        </a>
+        <a href="https://telegram.me/only_to_top">
+            <svg class="icon-telegram" width="22" height="17" viewBox="0 0 22 17" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.61862 11.2189L16.7717 16.7684C17.7021 17.2414 18.3736 16.9965 18.6053 15.9726L21.924 1.56445C22.2638 0.30941 21.4048 -0.259816 20.5147 0.112461L1.0272 7.03535C-0.303004 7.5269 -0.295249 8.21061 0.784733 8.51526L5.78567 9.95328L17.3634 3.22393C17.9099 2.91858 18.4116 3.08274 17.9998 3.41939"
+                      fill="#575757"/>
+            </svg>
+        </a>
+    </div>
+    <div class="overlay js-overlay-modal"></div>
+</header>
+
+
+<div class="slider">
+    <div class="slider__wrapper">
+        <div class="slider__items">
+            <div class="slider__item">
+                <div class="slider-heading">
+                    <div class="slider-text">
+                        <h1>Авто в лизинг для физических лиц</h1>
+                        <h2>Получите машину за 5 дней</h2>
+                    </div>
+                    <button class="slider-button js-open-modal">
+                        <a href="#" class="js-open-modal slider-button-text" data-modal="1">
+                            Оставить заявку</a>
+                    </button>
+                </div>
+                <img src="assets/images/photo-1485291571150-772bcfc10da5.jfif" alt="">
+            </div>
+            <div class="slider__item">
+                <img src="assets/images/1.jpg" alt="">
+            </div>
+            <div class="slider__item">
+                <img src="assets/images/2.jpg" alt="">
+            </div>
+            <div class="slider__item">
+                <img src="assets/images/3.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <a class="slider__control slider__control_prev" href="#" role="button"></a>
+    <a class="slider__control slider__control_next" href="#" role="button"></a>
+</div>
+
+
+<div class="calculator-menu" id="calculator-but">
+    <div class="calculator-heading">Рассчитайте стоимость автомобиля в лизинг</div>
+    <div class="flex-wrapper">
+        <div class="calculator-content">
+            <div class="calculator-content-body">
+                <div class="calculator-content-body-left">
+                    <div class="calculator-content-body-left-inputs">
+                        <div class="input-wrapper-1">
+                            <div class="title-input-wrapper">Стоимость автомобиля</div>
+                            <div class="input">
+                                <input type="number" id="total-cost" value="0">
+                            </div>
+                            <div class="input">
+                                <input type="range" min="1000000" max="6000000" id="total-cost-range" value="0"
+                                       class="input-range">
+                            </div>
+                            <div class="final-result-item" id="sum-1">
+                                <div class="title-value">Сумма кредита</div>
+                                <div class="value" id="amount-of-credit">0<span>₽</span></div>
+                            </div>
+                            <div class="final-result-item" id="rec-1">
+                                <div class="title-value">Рекомендуемый доход</div>
+                                <div class="value" id="recommended-income">0<span>₽</span></div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper-2">
+                            <div class="title-input-wrapper">Первоначальный взнос</div>
+                            <div class="input">
+                                <input type="number" id="an-initial-fee" value="0">
+                            </div>
+                            <div class="input">
+                                <input type="range" min="10" max="60" id="an-initial-fee-range" value="0"
+                                       class="input-range">
+                            </div>
+                            <div class="final-result-item final-result">
+                                <div class="title-value">Ежемесячный платеж</div>
+                                <div class="value" id="monthly-payment">0<span>₽</span></div>
+                            </div>
+                            <div class="final-result-item final-result">
+                                <div class="title-value">Сумма договора лизинга</div>
+                                <div class="value" id="sum">0<span>₽</span></div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper-3">
+                            <div class="title-input-wrapper">Срок лизинга</div>
+                            <div class="input">
+                                <input type="number" id="credit-term" value="0">
+                            </div>
+                            <div class="input">
+                                <input type="range" min="1" max="60" id="credit-term-range" value="0"
+                                       class="input-range">
+                            </div>
+                            <button class="input-button-4">
+                                <div class="input-button-text-4">
+                                    <a href="#" class="js-open-modal" data-modal="1">Оставить заявку</a></div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="calculator-content-title">Выбрать банк</div>
+                    <div class="calculator-content-body-left-btns">
+                        <button data-name="alfa" class="bank active">
+                            <div class="text">Альфа-банк</div>
+                            <div class="value">8,7%</div>
+                        </button>
+                        <button data-name="sberbank" class="bank">
+                            <div class="text">Сбербанк</div>
+                            <div class="value">8,4%</div>
+                        </button>
+                        <button data-name="pochta" class="bank">
+                            <div class="text">Почта-банк</div>
+                            <div class="value">7,9%</div>
+                        </button>
+                        <button data-name="tinkoff" class="bank">
+                            <div class="text">Тинькофф-банк</div>
+                            <div class="value">9,2%</div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
